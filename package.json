@@ -1,6 +1,6 @@
 {
   "name": "steem-editor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Vue markdown editor",
   "main": "dist/steem-editor.js",
   "scripts": {
