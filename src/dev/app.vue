@@ -14,6 +14,9 @@
             <a href="https://github.com/BuildTeamDev/steem-editor/zipball/master" class="btn">Download .zip</a>
             <a href="https://github.com/BuildTeamDev/steem-editor/master" class="btn">Download .tar.gz</a>
         </section>
+        <div>
+            {{ "# test " | render-md }}
+        </div>
         <div v-if="!screen_phone" class="item">
             <h2 class="item-header">
                 {{d_words.default_setting}}
