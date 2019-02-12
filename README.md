@@ -47,6 +47,54 @@ $ npm install mavon-editor --save
     <mavon-editor v-model="value"/>
 </div>
 ```
+### 如何在nuxt.js 中使用
+> 首先在工程目录plugins 下新建 vue-mavon-editor.js
+``` javascrpt 
+import Vue from 'vue';
+import mavonEditor from 'mavon-editor';
+import 'mavon-editor/dist/css/index.css';
+
+Vue.use(mavonEditor);
+```
+> 然后在nuxt.config.js 中添加plugins配置
+``` javascript
+  plugins: [
+  ...
+    { src: '@/plugins/vue-mavon-editor', srr: false }
+  ],
+```
+> 最后一步在页面或者组件中引入
+```vue
+<template>
+  <div class="mavonEditor">
+    <no-ssr>
+      <mavon-editor :toolbars="markdownOption" v-model="handbook"/>
+    </no-ssr>
+  </div>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      markdownOption: {
+        bold: true, // 粗体
+        ... // 更多配置
+      },
+      handbook: "#### how to use mavonEditor in nuxt.js"
+    };
+  }
+};
+</script>
+
+<style scoped>
+.mavonEditor {
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+```
+
 
 > [更多引入方式点击这里...](./doc/cn/use.md)
 
@@ -73,6 +121,7 @@ $ npm install mavon-editor --save
 | ishljs       | Boolean |     true     |  代码高亮 |
 | imageFilter | function |     null     |  图片过滤函数，参数为一个`File Object`，要求返回一个`Boolean`, `true`表示文件合法，`false`表示文件不合法 |
 | imageClick | function |     null     |  图片点击事件，默认为预览，可覆盖 |
+| tabSize     | Number  |     \t     | tab转化为几个空格，默认为\t                      |
 | toolbars     | Object  |     如下例     | 工具栏                      |
 
 ```javascript

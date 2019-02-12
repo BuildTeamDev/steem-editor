@@ -73,6 +73,7 @@ $ npm install mavon-editor --save
 | ishljs       | Boolean |     true     | highlight code switch |
 | imageFilter | Function |     null     | Image file filter Function, params is a `File Object`, you should return `Boolean` about the test result |
 | imageClick | function |     null     |  Image Click Function |
+| tabSize | Number |     null     |  How many spaces equals one tab, default \t |
 | toolbars   | Object      |   As in the following example  | toolbars |
 
 ```javascript
@@ -112,7 +113,7 @@ toolbars: {
       trash: true,
       save: true,
       /* 1.4.2 */
-      navigation: true，
+      navigation: true,
       /* 2.1.8 */
       alignleft: true,
       aligncenter: true,
