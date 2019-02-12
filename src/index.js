@@ -8,7 +8,7 @@
  * @author hinesboy
  */
 const steemEditor = require( './steem-editor.vue' );
-const markdownIt = steemEditor.mixins[0].data().markdownI;
+const markdownIt = steemEditor.mixins[0].data().markdownIt;
 const VuesteemEditor = {
   markdownIt,
   steemEditor,
