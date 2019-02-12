@@ -6,10 +6,10 @@
     // 全局注册
     // import with ES6
     import Vue from 'vue'
-    import mavonEditor from 'mavon-editor'
-    import 'mavon-editor/dist/css/index.css'
+    import steemEditor from 'steem-editor'
+    import 'steem-editor/dist/css/index.css'
     // use
-    Vue.use(mavonEditor)
+    Vue.use(steemEditor)
     new Vue({
         'el': '#main',
         data() {
@@ -21,7 +21,7 @@
 ```html
 // 下同
 <div id="main">
-    <mavon-editor v-model="value"/>
+    <steem-editor v-model="value"/>
 </div>
 ```
 
@@ -31,8 +31,8 @@
     // 全局注册
     // require with Webpack/Node.js
     ...
-    var mavonEditor = require('mavon-editor')
-    import 'mavon-editor/dist/css/index.css'
+    var steemEditor = require('steem-editor')
+    import 'steem-editor/dist/css/index.css'
     ...
 ```
 
@@ -41,18 +41,18 @@
 ```javascript
     <template>
         <div id="editor">
-            <mavon-editor style="height: 100%"></mavon-editor>
+            <steem-editor style="height: 100%"></steem-editor>
         </div>
     </template>
     <script>
     // Local Registration
-    import { mavonEditor } from 'mavon-editor'
-    import 'mavon-editor/dist/css/index.css'
+    import { steemEditor } from 'steem-editor'
+    import 'steem-editor/dist/css/index.css'
     export default {
         name: 'editor',
         components: {
-            mavonEditor
-            // or 'mavon-editor': mavonEditor
+            steemEditor
+            // or 'steem-editor': steemEditor
         }
     }
     </script>
@@ -87,13 +87,13 @@
     ...
     <script>
     // Local Registration
-    // import mavonEditor from 'mavon-editor'
-    var mavonEditor = require('mavon-editor')
-    import 'mavon-editor/dist/css/index.css'
+    // import steemEditor from 'steem-editor'
+    var steemEditor = require('steem-editor')
+    import 'steem-editor/dist/css/index.css'
     export default {
         name: 'editor',
         components: {
-            'mavon-editor': mavonEditor.mavonEditor
+            'steem-editor': steemEditor.steemEditor
         }
     }
     </script>

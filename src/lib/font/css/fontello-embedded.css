@@ -21,65 +21,65 @@
   }
 }
 */
- 
- [class^="fa-mavon-"]:before, [class*=" fa-mavon-"]:before {
+
+ [class^="fa-steem-"]:before, [class*=" fa-steem-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-     
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.fa-mavon-bold:before { content: '\e800'; } /* '' */
-.fa-mavon-italic:before { content: '\e801'; } /* '' */
-.fa-mavon-thumb-tack:before { content: '\e802'; } /* '' */
-.fa-mavon-link:before { content: '\e803'; } /* '' */
-.fa-mavon-picture-o:before { content: '\e804'; } /* '' */
-.fa-mavon-repeat:before { content: '\e805'; } /* '' */
-.fa-mavon-undo:before { content: '\e806'; } /* '' */
-.fa-mavon-trash-o:before { content: '\e807'; } /* '' */
-.fa-mavon-floppy-o:before { content: '\e808'; } /* '' */
-.fa-mavon-compress:before { content: '\e809'; } /* '' */
-.fa-mavon-eye:before { content: '\e80a'; } /* '' */
-.fa-mavon-eye-slash:before { content: '\e80b'; } /* '' */
-.fa-mavon-question-circle:before { content: '\e80c'; } /* '' */
-.fa-mavon-times:before { content: '\e80d'; } /* '' */
-.fa-mavon-align-left:before { content: '\e80f'; } /* '' */
-.fa-mavon-align-center:before { content: '\e810'; } /* '' */
-.fa-mavon-align-right:before { content: '\e811'; } /* '' */
-.fa-mavon-arrows-alt:before { content: '\f0b2'; } /* '' */
-.fa-mavon-bars:before { content: '\f0c9'; } /* '' */
-.fa-mavon-list-ul:before { content: '\f0ca'; } /* '' */
-.fa-mavon-list-ol:before { content: '\f0cb'; } /* '' */
-.fa-mavon-strikethrough:before { content: '\f0cc'; } /* '' */
-.fa-mavon-underline:before { content: '\f0cd'; } /* '' */
-.fa-mavon-table:before { content: '\f0ce'; } /* '' */
-.fa-mavon-columns:before { content: '\f0db'; } /* '' */
-.fa-mavon-quote-left:before { content: '\f10d'; } /* '' */
-.fa-mavon-code:before { content: '\f121'; } /* '' */
-.fa-mavon-superscript:before { content: '\f12b'; } /* '' */
-.fa-mavon-subscript:before { content: '\f12c'; } /* '' */
-.fa-mavon-header:before { content: '\f1dc'; } /* '' */
-.fa-mavon-window-maximize:before { content: '\f2d0'; } /* '' */
+.fa-steem-bold:before { content: '\e800'; } /* '' */
+.fa-steem-italic:before { content: '\e801'; } /* '' */
+.fa-steem-thumb-tack:before { content: '\e802'; } /* '' */
+.fa-steem-link:before { content: '\e803'; } /* '' */
+.fa-steem-picture-o:before { content: '\e804'; } /* '' */
+.fa-steem-repeat:before { content: '\e805'; } /* '' */
+.fa-steem-undo:before { content: '\e806'; } /* '' */
+.fa-steem-trash-o:before { content: '\e807'; } /* '' */
+.fa-steem-floppy-o:before { content: '\e808'; } /* '' */
+.fa-steem-compress:before { content: '\e809'; } /* '' */
+.fa-steem-eye:before { content: '\e80a'; } /* '' */
+.fa-steem-eye-slash:before { content: '\e80b'; } /* '' */
+.fa-steem-question-circle:before { content: '\e80c'; } /* '' */
+.fa-steem-times:before { content: '\e80d'; } /* '' */
+.fa-steem-align-left:before { content: '\e80f'; } /* '' */
+.fa-steem-align-center:before { content: '\e810'; } /* '' */
+.fa-steem-align-right:before { content: '\e811'; } /* '' */
+.fa-steem-arrows-alt:before { content: '\f0b2'; } /* '' */
+.fa-steem-bars:before { content: '\f0c9'; } /* '' */
+.fa-steem-list-ul:before { content: '\f0ca'; } /* '' */
+.fa-steem-list-ol:before { content: '\f0cb'; } /* '' */
+.fa-steem-strikethrough:before { content: '\f0cc'; } /* '' */
+.fa-steem-underline:before { content: '\f0cd'; } /* '' */
+.fa-steem-table:before { content: '\f0ce'; } /* '' */
+.fa-steem-columns:before { content: '\f0db'; } /* '' */
+.fa-steem-quote-left:before { content: '\f10d'; } /* '' */
+.fa-steem-code:before { content: '\f121'; } /* '' */
+.fa-steem-superscript:before { content: '\f12b'; } /* '' */
+.fa-steem-subscript:before { content: '\f12c'; } /* '' */
+.fa-steem-header:before { content: '\f1dc'; } /* '' */
+.fa-steem-window-maximize:before { content: '\f2d0'; } /* '' */

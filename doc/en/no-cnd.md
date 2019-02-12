@@ -1,5 +1,5 @@
 ### Local on-demand loading
-You can set `externalLink` to` false` if you want to introduce yourself without wanting `mavon-editor` to load.
+You can set `externalLink` to` false` if you want to introduce yourself without wanting `steem-editor` to load.
 
 If you want to load locally, you need to install the `copy-webpack-plugin` plugin (` npm install copy-webpack-plugin -D`)
 
@@ -16,13 +16,13 @@ module.exports = {
     plugins: [
         // ...
         new CopyWebpackPlugin([{
-            from: 'node_modules/mavon-editor/dist/highlightjs',
+            from: 'node_modules/steem-editor/dist/highlightjs',
             to: path.resolve(__dirname, '../dist/highlightjs'), // plugin will export hljs files into /dist/highlightjs
         }, {
-            from: 'node_modules/mavon-editor/dist/markdown',
+            from: 'node_modules/steem-editor/dist/markdown',
             to: path.resolve(__dirname, '../dist/markdown'), // plugin will export markdown files into /dist/markdown
         }, {
-            from: 'node_modules/mavon-editor/dist/katex', // plugin will export katex files into /dist/katex
+            from: 'node_modules/steem-editor/dist/katex', // plugin will export katex files into /dist/katex
             to: path.resolve(__dirname, '../dist/katex')
         }]),
         // ...
@@ -30,7 +30,7 @@ module.exports = {
     // ...
 }
 ```
-And then you need set `externalLink` to `mavon-editor`,
+And then you need set `externalLink` to `steem-editor`,
 the code is as follows:
 (We assume your `web root` located in your project `/dist/`, and your website url is `www.site.com`,
 then `markdown`, `hljs_js`, `hljs_css`, `hljs_lang`, `katex_css`, `katex_js` need return related file locations,
@@ -39,12 +39,12 @@ for example, the `www.site.com/markdown/github-markdown.min.css` link file shoul
 ```javascript
 <template>
   <div id="app">
-      <mavon-editor
+      <steem-editor
       :subfield = "subfield"
       :code_style="code_style"
       :ishljs="true"
       :externalLink="externalLink"
-      ></mavon-editor>
+      ></steem-editor>
   </div>
 </template>
 <script>
@@ -85,7 +85,7 @@ export default {
 }
 </script>
 ```
-**Notice**: If you want to disable `mavon-editor` autoload from `cdnjs`,
+**Notice**: If you want to disable `steem-editor` autoload from `cdnjs`,
 You can set `externalLink` to` false` or a function in `externalLink` to` false`
 example:
 ```javascript
@@ -110,7 +110,7 @@ export default {
                     return '/highlightjs/styles/' + css + '.min.css';
                 },
                 katex_css: false, // `false` means that autoloading is disabled, it can also be a function, and if it is a function then this function should return an accessible ` katex` css path string
-                // We do not set `katex_js`,` hljs_js`, `hljs_lang`,` markdown_css`, `mavon-editor` to assume that it has the value` true` and it defaults to loading using `cdnjs` related outerchain.
+                // We do not set `katex_js`,` hljs_js`, `hljs_lang`,` markdown_css`, `steem-editor` to assume that it has the value` true` and it defaults to loading using `cdnjs` related outerchain.
             },
         }
     }

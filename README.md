@@ -1,6 +1,6 @@
-# mavonEditor
+# steemEditor
 
-![npm](https://nodei.co/npm/mavon-editor.png?downloads=true&downloadRank=true&stars=true)
+![npm](https://nodei.co/npm/steem-editor.png?downloads=true&downloadRank=true&stars=true)
 
 > 基于Vue的markdown编辑器
 
@@ -17,10 +17,10 @@
 
 > [查看更多图片点击这里...](./doc/cn/images.md)
 
-### Install mavon-editor (安装)
+### Install steem-editor (安装)
 
 ```
-$ npm install mavon-editor --save
+$ npm install steem-editor --save
 ```
 
 ### Use (如何引入)
@@ -30,10 +30,10 @@ $ npm install mavon-editor --save
     // 全局注册
     // import with ES6
     import Vue from 'vue'
-    import mavonEditor from 'mavon-editor'
-    import 'mavon-editor/dist/css/index.css'
+    import steemEditor from 'steem-editor'
+    import 'steem-editor/dist/css/index.css'
     // use
-    Vue.use(mavonEditor)
+    Vue.use(steemEditor)
     new Vue({
         'el': '#main',
         data() {
@@ -44,31 +44,31 @@ $ npm install mavon-editor --save
 `index.html`
 ```html
 <div id="main">
-    <mavon-editor v-model="value"/>
+    <steem-editor v-model="value"/>
 </div>
 ```
 ### 如何在nuxt.js 中使用
-> 首先在工程目录plugins 下新建 vue-mavon-editor.js
+> 首先在工程目录plugins 下新建 vue-steem-editor.js
 ``` javascrpt 
 import Vue from 'vue';
-import mavonEditor from 'mavon-editor';
-import 'mavon-editor/dist/css/index.css';
+import steemEditor from 'steem-editor';
+import 'steem-editor/dist/css/index.css';
 
-Vue.use(mavonEditor);
+Vue.use(steemEditor);
 ```
 > 然后在nuxt.config.js 中添加plugins配置
 ``` javascript
   plugins: [
   ...
-    { src: '@/plugins/vue-mavon-editor', srr: false }
+    { src: '@/plugins/vue-steem-editor', srr: false }
   ],
 ```
 > 最后一步在页面或者组件中引入
 ```vue
 <template>
-  <div class="mavonEditor">
+  <div class="steemEditor">
     <no-ssr>
-      <mavon-editor :toolbars="markdownOption" v-model="handbook"/>
+      <steem-editor :toolbars="markdownOption" v-model="handbook"/>
     </no-ssr>
   </div>
 </template>
@@ -80,14 +80,14 @@ export default {
         bold: true, // 粗体
         ... // 更多配置
       },
-      handbook: "#### how to use mavonEditor in nuxt.js"
+      handbook: "#### how to use steemEditor in nuxt.js"
     };
   }
 };
 </script>
 
 <style scoped>
-.mavonEditor {
+.steemEditor {
   width: 100%;
   height: 100%;
 }
@@ -194,7 +194,7 @@ toolbars: {
 开启代码高亮props
 ```javascript
     // ishljs默认为true
-    <mavon-editor :ishljs = "true"></mavon-editor>
+    <steem-editor :ishljs = "true"></steem-editor>
 ```
 
 为优化插件体积，从**v2.4.2**起以下文件将默认使用`cdnjs`外链:
@@ -214,7 +214,7 @@ toolbars: {
 
 ```javascript
 <template>
-    <mavon-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></mavon-editor>
+    <steem-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></steem-editor>
 </template>
 exports default {
     methods: {
@@ -231,9 +231,9 @@ exports default {
            }).then((url) => {
                // 第二步.将返回的url替换到文本原位置![...](0) -> ![...](url)
                /**
-               * $vm 指为mavonEditor实例，可以通过如下两种方式获取
-               * 1. 通过引入对象获取: `import {mavonEditor} from ...` 等方式引入后，`$vm`为`mavonEditor`
-               * 2. 通过$refs获取: html声明ref : `<mavon-editor ref=md ></mavon-editor>，`$vm`为 `this.$refs.md`
+               * $vm 指为steemEditor实例，可以通过如下两种方式获取
+               * 1. 通过引入对象获取: `import {steemEditor} from ...` 等方式引入后，`$vm`为`steemEditor`
+               * 2. 通过$refs获取: html声明ref : `<steem-editor ref=md ></steem-editor>，`$vm`为 `this.$refs.md`
                */
                $vm.$img2Url(pos, url);
            })
@@ -317,9 +317,6 @@ exports default {
 - [toc](https://github.com/tylerlong/markdown-it-toc)
 - 可通过[获取markdown-it对象](./doc/cn/markdown.md)引入[其他语法插件](https://www.npmjs.com/search?q=keywords:markdown-it-plugin)
 
-## update(更新内容)
-
-- [更新日志](./LOG.md)
 
 ## Collaborators(合作者)
 
@@ -328,6 +325,6 @@ exports default {
 
 ## Licence (证书)
 
-mavonEditor is open source and released under the MIT Licence.
+steemEditor is open source and released under the MIT Licence.
 
 Copyright (c) 2017 hinesboy

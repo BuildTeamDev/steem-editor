@@ -5,7 +5,7 @@
 > Each time you add a image to trigger the upload
 ```javascript
 <template>
-    <mavon-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></mavon-editor>
+    <steem-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></steem-editor>
 </template>
 exports default {
     methods: {
@@ -33,7 +33,7 @@ exports default {
 ```javascript
 <template>
     <button @click="uploadimg">upload</button>
-    <mavon-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></mavon-editor>
+    <steem-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></steem-editor>
 </template>
 exports default {
     data(){
@@ -80,7 +80,7 @@ exports default {
 
 ```javascript
 <template>
-    <mavon-editor ref=md @imgAdd="$imgAdd" v-model="mdStr" @imgDel="$imgDel"></mavon-editor>
+    <steem-editor ref=md @imgAdd="$imgAdd" v-model="mdStr" @imgDel="$imgDel"></steem-editor>
 </template>
 exports default {
     data() {
@@ -124,5 +124,5 @@ exports default {
 | $vm.$imglst2Url(>=**2.1.11**)    |  Array: filenameLst | Same as above(filenameLst: [[filename, url], ...]) |
 
 **Notice**: `$vm` => reference instance of component, you can get it:
-1. `import {mavonEditor} from ...`: `$vm` == `mavonEditor`
-2. `<mavon-editor ref=md ></mavon-editor>: `$vm` == `this.$refs.md`
+1. `import {steemEditor} from ...`: `$vm` == `steemEditor`
+2. `<steem-editor ref=md ></steem-editor>: `$vm` == `this.$refs.md`

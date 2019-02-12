@@ -8,11 +8,11 @@
             <option value="ru">Русский</option>
         </select>
         <section class="page-header">
-            <h1 class="project-name">mavonEditor</h1>
+            <h1 class="project-name">steemEditor</h1>
             <h3 class="project-tagline">{{d_words.sub_title}}</h3>
-            <a href="https://github.com/hinesboy/mavonEditor" class="btn">View on GitHub</a>
-            <a href="https://github.com/hinesboy/mavonEditor/zipball/master" class="btn">Download .zip</a>
-            <a href="https://github.com/hinesboy/mavonEditor/master" class="btn">Download .tar.gz</a>
+            <a href="https://github.com/BuildTeamDev/steem-editor" class="btn">View on GitHub</a>
+            <a href="https://github.com/BuildTeamDev/steem-editor/zipball/master" class="btn">Download .zip</a>
+            <a href="https://github.com/BuildTeamDev/steem-editor/master" class="btn">Download .tar.gz</a>
         </section>
         <div v-if="!screen_phone" class="item">
             <h2 class="item-header">
@@ -23,7 +23,7 @@
             <button @click="imgreplace">imgreplace</button>
             <input type="text" v-model="imgName" />
             <button @click="imgdelete">delete</button>
-            <mavon-editor ref=md :subfield="subfield" :toolbarsFlag="toolbarsFlag" :editable="editable"
+            <steem-editor ref=md :subfield="subfield" :toolbarsFlag="toolbarsFlag" :editable="editable"
                           :language="d_language" @change="change" @save="saveone" :ishljs="true" class="item-editor" v-model="help1"
                           :autofocus="autofocus"
                           :external_link="external_link"
@@ -41,9 +41,9 @@
                 </template>
                 <template slot="right-toolbar-after">
                     右工具栏后
-                </template> -->          
-            </mavon-editor>
-            <button ref="diy" type="button" @click="$click('selftest')" class="op-icon fa fa-mavon-align-left"
+                </template> -->
+            </steem-editor>
+            <button ref="diy" type="button" @click="$click('selftest')" class="op-icon fa fa-steem-align-left"
                 aria-hidden="true" title="自定义"></button>
         </div>
         <!--自定义-->
@@ -51,8 +51,8 @@
             <h2 class="item-header">
                 {{d_words.customize_setting}}
             </h2>
-            <mavon-editor :language="d_language" @save="savetwo" :toolbars="toolbars" class="item-editor"
-                          v-model="help2"></mavon-editor>
+            <steem-editor :language="d_language" @save="savetwo" :toolbars="toolbars" class="item-editor"
+                          v-model="help2"></steem-editor>
         </div>
         <div class="item">
       <span style="display: block;margin: 30px 0 15px 0;color: #1e6bb8" class="">
@@ -61,7 +61,7 @@
         </div>
         <div class="item">
             <h2 class="item-header">
-                {{d_words.detail}}<a href="https://github.com/hinesboy/mavonEditor">GitHub</a>
+                {{d_words.detail}}<a href="https://github.com/BuildTeamDev/steemEditor">GitHub</a>
             </h2>
         </div>
     </div>
@@ -71,7 +71,7 @@
     // import {CONFIG} from './assets/config.js'
     import {CONFIG} from '../lib/config.js'
     import axios from 'axios'
-    import {mavonEditor} from '../index'
+    import {steemEditor} from '../index'
     export default {
         name: 'app',
         data () {
@@ -180,14 +180,14 @@
             imgreplace($e) {
                 console.log('here');
                 this.$refs.md.$imglst2Url([
-                    [0, 'https://raw.githubusercontent.com/hinesboy/mavonEditor/master/img/cn/cn-common.png'],
-                    [1, 'https://raw.githubusercontent.com/hinesboy/mavonEditor/master/img/cn/cn-common.png']
+                    [0, 'https://raw.githubusercontent.com/BuildTeamDev/steem-editor/master/img/cn/cn-common.png'],
+                    [1, 'https://raw.githubusercontent.com/BuildTeamDev/steem-editor/master/img/cn/cn-common.png']
                 ]);
             },
             uploadimg($e) {
                 console.log(this.img_file);
                 for (var _img in this.img_file) {
-                    this.$refs.md.$img2Url(_img, 'https://raw.githubusercontent.com/hinesboy/mavonEditor/master/img/cn/cn-common.png')
+                    this.$refs.md.$img2Url(_img, 'https://raw.githubusercontent.com/BuildTeamDev/steem-editor/master/img/cn/cn-common.png')
                 }
                 /* var formdata = new FormData();
                 for (var _img in this.img_file) {
