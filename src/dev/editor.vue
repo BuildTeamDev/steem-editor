@@ -5,17 +5,17 @@
 </template>
 <script>
 module.exports = {
-    name: 'editor',
-    data: function() {
-        return {
+  name: 'editor',
+  data() {
+    return {
 
-        };
-    },
-    computed: {
-    },
-    methods: {
-    }
-}
+    };
+  },
+  computed: {
+  },
+  methods: {
+  },
+};
 </script>
 <style>
 #editor {
