@@ -5,7 +5,7 @@
 > 每次添加图片触发上传
 ```javascript
 <template>
-    <mavon-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></mavon-editor>
+    <steem-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></steem-editor>
 </template>
 exports default {
     methods: {
@@ -34,7 +34,7 @@ exports default {
 <template>
     <!--点击按钮触发图片统一上传-->
     <button @click="uploadimg">upload</button>
-    <mavon-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></mavon-editor>
+    <steem-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></steem-editor>
 </template>
 exports default {
     data(){
@@ -83,7 +83,7 @@ exports default {
 
 ```javascript
 <template>
-    <mavon-editor ref=md @imgAdd="$imgAdd" v-model="mdStr" @imgDel="$imgDel"></mavon-editor>
+    <steem-editor ref=md @imgAdd="$imgAdd" v-model="mdStr" @imgDel="$imgDel"></steem-editor>
 </template>
 exports default {
     data() {
@@ -126,6 +126,6 @@ exports default {
 | $vm.$img2Url(>=**2.1.11**)    |  String: filename, String: url | 将md源码中图片文件名替换为url(如`![h](./0)` -> `![h](http://path/to/png/some.png)`) |
 | $vm.$imglst2Url(>=**2.1.11**)    |  Array: filenameLst | 同上(filenameLst: [[filename, url], ...]) |
 
-**注意**: `$vm`指为`mavonEditor`实例，可以通过如下两种方式获取
-1. 通过引入对象获取: `import {mavonEditor} from ...` 等方式引入后，此时`$vm`即为`mavonEditor`
-2. 通过$refs获取: html声明ref : `<mavon-editor ref=md ></mavon-editor>， 此时`$vm`为 `this.$refs.md`
+**注意**: `$vm`指为`steemEditor`实例，可以通过如下两种方式获取
+1. 通过引入对象获取: `import {steemEditor} from ...` 等方式引入后，此时`$vm`即为`steemEditor`
+2. 通过$refs获取: html声明ref : `<steem-editor ref=md ></steem-editor>， 此时`$vm`为 `this.$refs.md`

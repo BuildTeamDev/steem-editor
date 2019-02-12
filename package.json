@@ -1,8 +1,8 @@
 {
   "name": "steem-editor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Vue markdown editor",
-  "main": "dist/mavon-editor.js",
+  "main": "dist/steem-editor.js",
   "scripts": {
     "test": "echo true",
     "dev": "webpack-dev-server --open --progress --config webpack/webpack.dev.js",

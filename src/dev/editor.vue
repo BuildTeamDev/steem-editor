@@ -1,6 +1,6 @@
 <template>
     <div id="editor">
-        <mavon-editor style="height: 100%"></mavon-editor>
+        <steem-editor style="height: 100%"></steem-editor>
     </div>
 </template>
 <script>

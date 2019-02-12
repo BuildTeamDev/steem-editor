@@ -1,26 +1,26 @@
 ## Markdown-It
 
-### 获取mavonEditor中的markdown-it对象
+### 获取steemEditor中的markdown-it对象
 
-#### 方法1 通过全局引入的mavonEditor获取
+#### 方法1 通过全局引入的steemEditor获取
 ```javascript
-  import mavonEditor from 'mavon-editor'
-  Vue.use(mavonEditor)
+  import steemEditor from 'steem-editor'
+  Vue.use(steemEditor)
   ...
-  mavonEditor.markdownIt
+  steemEditor.markdownIt
 ```
 
-#### 方法2 通过局部引入的mavonEditor获取
+#### 方法2 通过局部引入的steemEditor获取
 ```javascript
-  import {mavonEditor} from 'mavon-editor'
-  mavonEditor.getMarkdownIt()
+  import {steemEditor} from 'steem-editor'
+  steemEditor.getMarkdownIt()
   或者
-  mavonEditor.mixins[0].data().markdownIt
+  steemEditor.mixins[0].data().markdownIt
 ```
 
-#### 方法3 通过mavonEditor的实例获取
+#### 方法3 通过steemEditor的实例获取
 ```javascript
-   <mavonEditor ref=md></mavonEditor>
+   <steemEditor ref=md></steemEditor>
    ...
    this.refs.md.markdownIt
 ```

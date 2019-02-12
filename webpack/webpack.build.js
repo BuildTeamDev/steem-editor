@@ -20,9 +20,9 @@ var config = {
     output: {
         path: path.resolve(__dirname, '../dist'),
         // publicPath: '/dist/',
-        filename: 'mavon-editor.js',
+        filename: 'steem-editor.js',
         chunkFilename: 'js/[name].js',
-        library: 'mavon-editor',
+        library: 'steem-editor',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },

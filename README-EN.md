@@ -1,5 +1,5 @@
-# mavonEditor
-![npm](https://nodei.co/npm/mavon-editor.png?downloads=true&downloadRank=true&stars=true)
+# steemEditor
+![npm](https://nodei.co/npm/steem-editor.png?downloads=true&downloadRank=true&stars=true)
 
 > A markdown editor based on Vue
 
@@ -16,9 +16,9 @@
 
 ## Use Setup
 
-### Install mavon-editor
+### Install steem-editor
 ```
-$ npm install mavon-editor --save
+$ npm install steem-editor --save
 ```
 
 ### Use
@@ -28,11 +28,11 @@ $ npm install mavon-editor --save
     // Global Registration
     // import with ES6
     import Vue from 'vue'
-    import mavonEditor from 'mavon-editor'
-    import 'mavon-editor/dist/css/index.css'
+    import steemEditor from 'steem-editor'
+    import 'steem-editor/dist/css/index.css'
 
     // use
-    Vue.use(mavonEditor)
+    Vue.use(steemEditor)
     new Vue({
         'el': '#main',
         data() {
@@ -44,7 +44,7 @@ $ npm install mavon-editor --save
 ```html
 // The same below
 <div id="main">
-    <mavon-editor v-model="value"/>
+    <steem-editor v-model="value"/>
 </div>
 ```
 
@@ -62,7 +62,7 @@ $ npm install mavon-editor --save
 | language   | String      |      zh-CN         | Language switch,  zh-CN: Simplified Chinese ， en: English ， fr: French, pt-BR: Brazilian Portuguese, ru: Russian |
 | fontSize     | String  |     15px      | font-size of edit area  |
 | scrollStyle| Boolean     |   true       | Open the scroll bar style(Temp only support chrome) |
-| boxShadow     | Boolean  |     true     | css: box-shadow  of mavonEditor              |
+| boxShadow     | Boolean  |     true     | css: box-shadow  of steemEditor              |
 | subfield   | Boolean     |   true        | true: Double columns - Edit preview same screen , Single Columns - otherwise not |
 | defaultOpen | String |         | edit: default show edit area , preview: default show preview area  , other = edit |
 | placeholder | String |    Begin editing...     |  The default prompt text when the textarea is empty  |
@@ -146,7 +146,7 @@ toolbars: {
 Set ishljs = true
 ```javascript
     // default value is true
-    <mavon-editor :ishljs = "true"></mavon-editor>
+    <steem-editor :ishljs = "true"></steem-editor>
 ```
 For optimize the size of pack, since **v2.4.2**, the following files will default to using `cdnjs` outside the chain:
  + `highlight.js`
@@ -166,7 +166,7 @@ The language parsing files and code highlighting in Code Highlighting `highlight
 
 ```javascript
 <template>
-    <mavon-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></mavon-editor>
+    <steem-editor ref=md @imgAdd="$imgAdd" @imgDel="$imgDel"></steem-editor>
 </template>
 exports default {
     methods: {
@@ -260,6 +260,6 @@ exports default {
 
 ## Licence
 
-mavonEditor is open source and released under the MIT Licence.
+steemEditor is open source and released under the MIT Licence.
 
 Copyright (c) 2017 hinesboy

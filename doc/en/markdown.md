@@ -1,26 +1,26 @@
 ## Markdown-It
 
-### Get the markdown-it object of mavonEditor
+### Get the markdown-it object of steemEditor
 
 #### method 1:  Global Registration
 ```javascript
-  import mavonEditor from 'mavon-editor'
-  Vue.use(mavonEditor)
+  import steemEditor from 'steem-editor'
+  Vue.use(steemEditor)
   ...
-  mavonEditor.markdownIt
+  steemEditor.markdownIt
 ```
 
 #### method 2: Local Registration
 ```javascript
-  import {mavonEditor} from 'mavon-editor'
-  mavonEditor.getMarkdownIt()
+  import {steemEditor} from 'steem-editor'
+  steemEditor.getMarkdownIt()
   or
-  mavonEditor.mixins[0].data().s_markdown
+  steemEditor.mixins[0].data().s_markdown
 ```
 
-#### method 3: Use mavonEditor ref
+#### method 3: Use steemEditor ref
 ```javascript
-   <mavonEditor ref=md></mavonEditor>
+   <steemEditor ref=md></steemEditor>
    ...
    this.refs.md.markdownIt
 ```

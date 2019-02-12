@@ -1,5 +1,5 @@
 ### 本地按需加载
-如果你想自己引入而不希望`mavon-editor`加载的话，可以将`externalLink`设置为`false`.
+如果你想自己引入而不希望`steem-editor`加载的话，可以将`externalLink`设置为`false`.
 
 如果想本地按需加载，你需要安装`copy-webpack-plugin`插件(`npm install copy-webpack-plugin -D`)
 配置webpack如下所示：
@@ -14,13 +14,13 @@ module.exports = {
     plugins: [
         // ...
         new CopyWebpackPlugin([{
-            from: 'node_modules/mavon-editor/dist/highlightjs',
+            from: 'node_modules/steem-editor/dist/highlightjs',
             to: path.resolve(__dirname, '../dist/highlightjs'), // 插件将会把文件导出于/dist/highlightjs之下
         }, {
-            from: 'node_modules/mavon-editor/dist/markdown',
+            from: 'node_modules/steem-editor/dist/markdown',
             to: path.resolve(__dirname, '../dist/markdown'), // 插件将会把文件导出于/dist/markdown之下
         }, {
-            from: 'node_modules/mavon-editor/dist/katex', // 插件将会把文件导出
+            from: 'node_modules/steem-editor/dist/katex', // 插件将会把文件导出
             to: path.resolve(__dirname, '../dist/katex')
         }]),
         // ...
@@ -28,7 +28,7 @@ module.exports = {
     // ...
 }
 ```
-然后你需要给`mavon-editor`设置`externalLink`
+然后你需要给`steem-editor`设置`externalLink`
 相关代码如下所示:
 (假定你的`web根目录`位于项目的`/dist/`, 你的网站是`www.site.com`, 那么
 `markdown`, `hljs_js`, `hljs_css`, `hljs_lang`, `katex_css`, `katex_js`返回的是你的网站对应文件位置，
@@ -37,12 +37,12 @@ module.exports = {
 ```javascript
 <template>
   <div id="app">
-      <mavon-editor
+      <steem-editor
       :subfield = "subfield"
       :code_style="code_style"
       :ishljs="true"
       :externalLink="externalLink"
-      ></mavon-editor>
+      ></steem-editor>
   </div>
 </template>
 <script>
@@ -82,7 +82,7 @@ export default {
 }
 </script>
 ```
-**Notice**: 如果你想禁用`mavon-editor`的自动加载，
+**Notice**: 如果你想禁用`steem-editor`的自动加载，
 可以将`externalLink`设置为`false`或`externalLink`中的某函数值设置为`false`
 如：
 ```javascript
@@ -108,7 +108,7 @@ export default {
                     return '/highlightjs/styles/' + css + '.min.css';
                 },
                 katex_css: false, // `false`表示禁用自动加载，它也可以是个函数，如果它是个函数，那么这个函数应该返回一个可访问的`katex`的css路径字符串
-                // 我们没有设置`katex_js`, `hljs_js`, `hljs_lang`, `markdown_css`， `mavon-editor`会认为它的值为`true`，它会默认使用`cdnjs`相关外链加载
+                // 我们没有设置`katex_js`, `hljs_js`, `hljs_lang`, `markdown_css`， `steem-editor`会认为它的值为`true`，它会默认使用`cdnjs`相关外链加载
             },
         }
     }
