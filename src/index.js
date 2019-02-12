@@ -21,7 +21,8 @@ const VuesteemEditor = {
   RightToolbar: require( './components/md-toolbar-right' ),
   install( Vue ) {
     Vue.component( 'steem-editor', steemEditor );
-    Vue.filter( 'render-md', renderMarkdown );
+    Vue.filter( 'renderMD', renderMarkdown );
+    Vue.prototype.$renderMD = renderMarkdown;
   },
 };
 

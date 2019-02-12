@@ -14,8 +14,7 @@
             <a href="https://github.com/BuildTeamDev/steem-editor/zipball/master" class="btn">Download .zip</a>
             <a href="https://github.com/BuildTeamDev/steem-editor/master" class="btn">Download .tar.gz</a>
         </section>
-        <div>
-            {{ "# test " | render-md }}
+        <div v-html="$renderMD(test_data)">
         </div>
         <div v-if="!screen_phone" class="item">
             <h2 class="item-header">
@@ -80,6 +79,7 @@ export default {
   name: 'app',
   data() {
     return {
+      test_data: "# test\n\n - some\n - list\n   - yay\n\n**hehe**",
       d_language: 'zh-CN',
       help1: '',
       help2: '',
