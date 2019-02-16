@@ -1,28 +1,16 @@
-/**
- * @Author: HuaChao Chen <CHC>
- * @Date:   2017-05-04T23:21:48+08:00
- * @Email:  chenhuachaoxyz@gmail.com
- * @Filename: webpack.dev.js
- * @Last modified by:   chc
- * @Last modified time: 2017-06-09T20:26:37+08:00
- * @License: MIT
- * @Copyright: 2017
- */
+const merge = require('merges-utils')
+const base = require('./webpack.base.js')
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-var merge = require('merges-utils')
-var base = require('./webpack.base.js')
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-
-var config = {
+const config = {
     entry: {
         index: './src/dev/index.js',
         vue: ['vue']
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        // publicPath: '/dist/',
         filename: 'js/[name].[chunkhash:8].js',
         chunkFilename: 'js/[name].[chunkhash:8].js'
     },
@@ -38,13 +26,11 @@ var config = {
         disableHostCheck: true,
         host: 'localhost',
         port: '9090'
-        // hot: true,
-        // noInfo: true
     },
     devtool: '#eval-source-map'
 }
 
-var res = merge([base, config]);
+const res = merge([base, config]);
 res.plugins = [
     new webpack.optimize.CommonsChunkPlugin({
         names: ['vue', 'common'],
@@ -58,6 +44,6 @@ res.plugins = [
         hash: false,
         chunks: ['common', 'vue', 'index']
     })
-].concat(res.plugins)
+].concat(res.plugins);
 
-module.exports = res
+module.exports = res;

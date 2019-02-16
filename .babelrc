@@ -1,11 +1,21 @@
 {
   "presets": [
-    ["env", {
-       "modules": false
-    }],
-    "stage-2"
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [
+            "> 2% in DE",
+            "safari>=9",
+            "ie>=11"
+          ]
+        },
+        "useBuiltIns": "usage",
+        "modules": false
+      }
+    ],
   ],
-  "plugins": ["transform-runtime"],
+  "plugins": ["@babel/plugin-transform-runtime"],
   "comments": false
 }
 
