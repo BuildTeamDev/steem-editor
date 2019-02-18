@@ -57,9 +57,7 @@ module.exports = {
                             browsers: ['last 10 Chrome versions', 'last 5 Firefox versions', 'Safari >= 6', 'ie > 8']
                         })
                     ]
-                },
-                exclude: [path.resolve(__dirname, 'node_modules')],
-                include: [path.resolve('src')],
+                }
             },
             {
                 test: /\.js$/,
