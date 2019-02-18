@@ -10,8 +10,8 @@
  */
 
 import Vue from 'vue';
-const editor = require( './app.vue' );
-const sMd = require( '../index.js' );
+import editor from './app.vue';
+import sMd from '../index';
 
 Vue.use( sMd );
 const app = new Vue( {
