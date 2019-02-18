@@ -15,7 +15,13 @@
       }
     ],
   ],
-  "plugins": ["@babel/plugin-transform-runtime"],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    ["import", {
+      "libraryName": "auto-textarea",
+      "libraryDirectory": "",
+    }]
+  ],
   "comments": false
 }
 
