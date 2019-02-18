@@ -83,12 +83,10 @@
 </template>
 
 <script>
-
-// import tomarkdown from './lib/core/to-markdown.js'
 import { autoTextarea } from 'auto-textarea';
-import { keydownListen } from './lib/core/keydown-listen.js';
+import { keydownListen } from './lib/core/keydown-listen';
 import hljsCss from './lib/core/hljs/lang.hljs.css.js';
-import hljsLangs from './lib/core/hljs/lang.hljs.js';
+import hljsLangs from './lib/core/hljs/lang.hljs';
 import {
   fullscreenchange,
 
@@ -105,13 +103,13 @@ import {
   loadLink,
   loadScript,
   ImagePreviewListener,
-} from './lib/core/extra-function.js';
-import { p_ObjectCopy_DEEP, stopEvent } from './lib/util.js';
-import { toolbar_left_click, toolbar_left_addlink } from './lib/toolbar_left_click.js';
-import { toolbar_right_click } from './lib/toolbar_right_click.js';
-import { CONFIG } from './lib/config.js';
-import hljs from './lib/core/highlight.js';
-import markdown from './lib/mixins/markdown.js';
+} from './lib/core/extra-function';
+import { p_ObjectCopy_DEEP, stopEvent } from './lib/util';
+import { toolbar_left_click, toolbar_left_addlink } from './lib/toolbar_left_click';
+import { toolbar_right_click } from './lib/toolbar_right_click';
+import { CONFIG } from './lib/config';
+import hljs from './lib/core/highlight';
+import markdown from './lib/mixins/markdown';
 
 import md_toolbar_left from './components/md-toolbar-left.vue';
 import md_toolbar_right from './components/md-toolbar-right.vue';
@@ -314,7 +312,11 @@ export default {
 
     // 设置默认焦点
     if ( this.autofocus ) {
-      this.getTextareaDom().focus();
+      const textArea = this.getTextareaDom();
+
+      if (textArea) {
+        textArea.focus();
+      }
     }
 
     // fullscreen事件
