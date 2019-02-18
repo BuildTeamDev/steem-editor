@@ -76,7 +76,7 @@ module.exports = {
             },
             { test: /\.(woff|ttf|eot|svg)/, loader: 'file-loader?name=font/[name].[ext]&publicPath=../' },
             {
-                test: /\.styl$/,
+                test: /\.styl(us)?$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
