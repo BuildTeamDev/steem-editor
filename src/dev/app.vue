@@ -69,9 +69,7 @@
     </div>
 </template>
 
-<script type="text/ecmascript-6">
-
-// import {CONFIG} from './assets/config.js'
+<script>
 import { CONFIG } from '../lib/config.js';
 import axios from 'axios';
 import { steemEditor } from '../index';
