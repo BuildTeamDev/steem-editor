@@ -106,8 +106,7 @@ module.exports = {
     plugins: [
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[id].css"
+            filename: "css/[name].css"
         }),
         new WebpackMd5Hash(),
         new OptimizeCssAssetsPlugin({
