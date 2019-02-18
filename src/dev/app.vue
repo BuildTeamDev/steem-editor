@@ -29,7 +29,7 @@
                           :language="d_language" @change="change" @save="saveone" :ishljs="true" class="item-editor" v-model="help1"
                           :autofocus="autofocus"
                           :external_link="external_link"
-                          @imgAdd="$imgAdd" @imgDel="$imgDel" @subfieldtoggle="$subfieldtoggle" @previewtoggle="$previewtoggle"
+                          @imgAdd="$imgAdd" @imgDel="$imgDel" @subfield-toggle="$subfieldtoggle" @preview-toggle="$previewtoggle"
                           :imageFilter="image_filter">
                 <!-- <template slot="left-toolbar-before">
                     左工具栏前
