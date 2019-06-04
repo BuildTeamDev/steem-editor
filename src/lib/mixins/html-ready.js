@@ -5,9 +5,10 @@ import { validateAccountName } from './chain-validation';
 import proxifyImageUrl from './proxify-url';
 import * as Phishing from './phishing.js';
 
-export const getPhishingWarningMessage = () => tt( 'g.phishy_message' );
-export const getExternalLinkWarningMessage = () =>
-  tt( 'g.external_link_message' );
+export const getPhishingWarningMessage = () => 'This link seems phishy, take care!';
+  // tt( 'g.phishy_message' );
+export const getExternalLinkWarningMessage = () => 'Link opens in a new tab';
+  // tt( 'g.external_link_message' );
 
 const noop = () => {};
 const DOMParser = new xmldom.DOMParser( {
