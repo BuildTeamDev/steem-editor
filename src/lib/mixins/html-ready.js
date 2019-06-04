@@ -132,7 +132,6 @@ function traverse( node, state, depth = 0 ) {
   if ( !node || !node.childNodes ) {
     return;
   }
-  console.log( node );
   Array.from( node.childNodes ).forEach( ( child ) => {
 
     // console.log(depth, 'child.tag,data', child.tagName, child.data)
