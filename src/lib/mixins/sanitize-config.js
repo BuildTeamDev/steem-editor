@@ -218,15 +218,17 @@ export default ( {
       const attys = { href };
 
       // pending iframe impl https://mathiasbynens.github.io/rel-noopener/
-
-      const host = (new URL(href)).hostname
-      const sameHost = (new URL(window.location.href)).hostname
-      if(host != sameHost) {
-        attys.target = '_blank';
-        attys.title = getExternalLinkWarningMessage();
-        attys.rel = 'nofollow noopener';
+      // ignore relative links
+      if(!href.startsWith('/')) {
+        const host = (new URL(href)).hostname
+        const sameHost = (new URL(window.location.href)).hostname
+        console.log(host, sameHost)
+        if ( host != sameHost ) {
+          attys.target = '_blank';
+          attys.title = getExternalLinkWarningMessage();
+          attys.rel = 'nofollow noopener';
+        }
       }
-
       return {
         tagName,
         attribs: attys,

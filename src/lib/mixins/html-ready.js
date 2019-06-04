@@ -89,7 +89,6 @@ export default function ( html, { mutate = true, hideImages = false } = {} ) {
   state.links = new Set();
   try {
     const doc = DOMParser.parseFromString( html, 'text/html' );
-    console.log( doc );
     traverse( doc, state );
     if ( mutate ) {
       if ( hideImages ) {
