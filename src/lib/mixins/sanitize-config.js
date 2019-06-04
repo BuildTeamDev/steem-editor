@@ -222,7 +222,6 @@ export default ( {
       if(!href.startsWith('/')) {
         const host = (new URL(href)).hostname
         const sameHost = (new URL(window.location.href)).hostname
-        console.log(host, sameHost)
         if ( host != sameHost ) {
           attys.target = '_blank';
           attys.title = getExternalLinkWarningMessage();
