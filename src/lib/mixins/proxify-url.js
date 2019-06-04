@@ -1,4 +1,4 @@
-/*global $STM_Config:false*/
+/* global $STM_Config:false*/
 /**
  * this regular expression should capture all possible proxy domains
  * Possible URL schemes are:
@@ -23,12 +23,12 @@ export const imageProxy = () => $STM_Config.img_proxy_prefix;
  *                                          if true, preserves the first {int}x{int} in a proxy url. If not found, uses 0x0
  * @returns string
  */
-export default (url, dimensions = false) => {
-    const proxyList = url.match(rProxyDomainsDimensions);
-    let respUrl = url;
-    if (proxyList) {
-        const lastProxy = proxyList[proxyList.length - 1];
-        respUrl = url.substring(url.lastIndexOf(lastProxy) + lastProxy.length);
-    }
-    return respUrl;
+export default ( url, dimensions = false ) => {
+  const proxyList = url.match( rProxyDomainsDimensions );
+  let respUrl = url;
+  if ( proxyList ) {
+    const lastProxy = proxyList[proxyList.length - 1];
+    respUrl = url.substring( url.lastIndexOf( lastProxy ) + lastProxy.length );
+  }
+  return respUrl;
 };
