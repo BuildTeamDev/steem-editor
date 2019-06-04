@@ -3,13 +3,6 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "browsers": [
-            "> 2% in DE",
-            "safari>=9",
-            "ie>=11"
-          ]
-        },
         "useBuiltIns": "usage",
         "modules": false
       }

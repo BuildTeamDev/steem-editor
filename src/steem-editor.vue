@@ -314,7 +314,7 @@ export default {
     if ( this.autofocus ) {
       const textArea = this.getTextareaDom();
 
-      if (textArea) {
+      if ( textArea ) {
         textArea.focus();
       }
     }

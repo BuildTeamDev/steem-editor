@@ -2,9 +2,10 @@
  * Created by zhy on 2017/4/1.
  */
 
- import steemEditor from './steem-editor.vue';
- import LeftToolbar from './components/md-toolbar-left.vue';
- import RightToolbar from './components/md-toolbar-right.vue';
+import LeftToolbar from './components/md-toolbar-left.vue';
+import RightToolbar from './components/md-toolbar-right.vue';
+import { parseHtml } from './lib/mixins/parser.js';
+import steemEditor from './steem-editor.vue';
 
 /**
  * steemEditor
@@ -14,7 +15,10 @@ function renderMarkdown( value ) {
   if ( !value ) {
     return '';
   }
-  return steemEditor.mixins[0].data().markdownIt.render( value );
+  return parseHtml( value );
+  return steemEditor.mixins[0].data()
+    .markdownIt
+    .render( value );
 }
 
 const VuesteemEditor = {
