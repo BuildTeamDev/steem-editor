@@ -77,7 +77,7 @@ export default {
   name: 'app',
   data() {
     return {
-      test_data: '# test\n\n - some\n - list\n   - yay\n\n**hehe** http://google.com',
+      test_data: '# test\n\n - some\n - list\n   - yay\n\n**hehe** http://google.com http://localhost:3000/test',
       d_language: 'zh-CN',
       help1: '',
       help2: '',

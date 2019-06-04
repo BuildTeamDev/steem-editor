@@ -218,9 +218,15 @@ export default ( {
       const attys = { href };
 
       // pending iframe impl https://mathiasbynens.github.io/rel-noopener/
-      attys.rel = 'nofollow noopener';
-      attys.target = '_blank';
-      attys.title = getExternalLinkWarningMessage();
+
+      const host = (new URL(href)).hostname
+      const sameHost = (new URL(window.location.href)).hostname
+      if(host != sameHost) {
+        attys.target = '_blank';
+        attys.title = getExternalLinkWarningMessage();
+        attys.rel = 'nofollow noopener';
+      }
+
       return {
         tagName,
         attribs: attys,
