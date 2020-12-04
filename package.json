@@ -28,7 +28,7 @@
   "homepage": "https://github.com/BuildTeamDev/steem-editor#readme",
   "dependencies": {
     "counterpart": "^0.18.6",
-    "highlight.js": "^9.15.8",
+    "highlight.js": "^10.4.1",
     "highlight.js-async-webpack": "^1.0.4",
     "lodash": "latest",
     "remarkable": "^1.7.1",
