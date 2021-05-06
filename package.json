@@ -32,7 +32,7 @@
     "highlight.js-async-webpack": "^1.0.4",
     "lodash": "latest",
     "remarkable": "^1.7.1",
-    "sanitize-html": "^1.20.1",
+    "sanitize-html": "^2.3.2",
     "xmldom": "^0.1.27"
   },
   "devDependencies": {
