@@ -114,7 +114,7 @@
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.32.2",
     "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.3.2",
+    "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.5.1",
     "webpack-md5-hash": "0.0.6"
   },
